@@ -1,0 +1,10 @@
+body {
+	padding: 15px;
+}
+
+.menu .active {
+	padding: 20px;
+}
+.nav {
+	padding-bottom: 80px;
+}

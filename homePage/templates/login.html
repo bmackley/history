@@ -1,0 +1,32 @@
+<%inherit file="base.htm" />
+<%block name="nav">
+  <nav>
+   <div class="nav-wrapper black">
+     <div class="row">
+        <div class="col s3 offset-s1 grid-example"><a href="/" class="brand-logo">Logo</a></div>
+         <div class="col s3 offset-s8 grid-example">  
+        </div>
+      </div>
+    </div>
+  </nav>
+</%block>
+<%block name="content">
+
+    <div class="container">
+        <center>
+        <div class="card indigo">
+            <div class="card-content white-text">
+                <span class="card-title">Login</span>
+                <span class="white-text">
+                <form method="POST" action = "/homePage/login">
+                  ${ form }
+                  <button class="btn waves-effect waves-light grey darken-1" type="submit" value ="submit"name="action">Submit
+                  </button> 
+                </form>
+                </span>
+            </div>
+        </div>
+        </center>
+    </div>
+</%block>
+

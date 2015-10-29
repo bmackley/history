@@ -1,0 +1,28 @@
+## Mako can find this base file because it's in the settings.py -> MAKO_TEMPLATES_DIRS list
+<%inherit file="base_template.htm" />d
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="/static/member/scripts/create_user.js"></script>
+
+
+<%block name="content">
+<div class="jumbotron"
+	<form method="POST">
+	<center>
+		<table>
+			<tbody>
+				${ form }
+			</tbody>
+		</table>
+	</center>
+	<ul style="list-style: none;">
+		<center>
+			<li>
+	            <h3>
+	                <input type="submit" Value="Submit"/>
+	            </h3>
+	        </li>
+	    </center>
+	</ul> 
+</div>
+
+</%block>

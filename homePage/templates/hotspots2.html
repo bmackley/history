@@ -1,0 +1,28 @@
+ <html>
+ <head>
+  <title>jQuery Image Scroller Plugin</title>
+  <meta charset="utf-8" />
+  <link href="/static/homePage/css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+<body>
+  <div id="container">
+  <div class="image-scroller">
+     <div id="hb-map-wrap">
+         <img id ='Tablet' src ="/static/homePage/images/Tablet1.png" class="feature-image" height="1280" width="960" />
+      </div>
+    <div class="preview">
+      <img src ="/static/homePage/images/Tablet1.png" height="180" width="135" />
+      <!--<img src="images/preview.jpg" alt="" height="180" width="135" />-->
+    </div>
+  </div>
+</div>
+  this is text
+  <script src="/static/homePage/js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="/static/homePage/js/jquery.imageScroller.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('div.image-scroller').imageScroller();
+    });
+  </script>
+</body>
+</html>

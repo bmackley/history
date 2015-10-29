@@ -1,0 +1,72 @@
+<%inherit file="base.htm" />
+
+
+<%block name="header">
+	
+</%block>
+<%block name="content">
+<div class = 'col-md-5'>
+	<h1>Fitness Groups</h1>
+</div>
+<div class = 'col-md-5'>
+</div>
+<div class = 'col-md-2'>
+	<a class='btn btn-info' href='/Manager/edit_group/new'>New Group</a>
+</div>
+
+<div class="col-md-12">
+	<table class= "table table-striped table-hover">
+			<thead>
+				<tr>
+					<th>Member</th>
+					<th>Weight</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+			
+			</tbody>
+			<thead>
+				<tr>
+					<th>Member</th>
+				</tr>
+			</thead>
+				%for user in members:
+					<tr>
+						<td>${user.member.username}</td>
+						<td>${user.member.weight}</td>
+					</tr>
+				%endfor
+
+			<tbody>
+			
+			</tbody>
+	</table>
+	<div class = 'col-md-2'>
+		<a class='btn btn-info' href='/Manager/send_invite/${gid}'>Invite Users to Group</a>
+	</div>
+	<div class = 'col-md-2'>
+		<a class='btn btn-info' href='/member/userGroup/${gid}'>Visit group</a>
+	</div>
+</div>
+</%block>
+
+<%block name="footer">
+
+</%block>
+
+'''
+				%for q in groups:
+					<tr>
+						<td>${q.groupName}</td>
+						<td>${q.city}</td>
+						<td>${q.state}</td>
+						<td>${q.zipcode}</td>
+						<td>${q.phone}</td>
+						# <td><a href="/Manager/edit_stores/${q.id}/">Edit</a></td> #
+						# <td><a class='btn btn-danger' href='/Manager/stores/delete/${q.id}/'>delete</a></td> #
+						
+					</tr>
+				
+				%endfor
+			'''
