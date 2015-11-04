@@ -1,16 +1,17 @@
 # -*- coding:ascii -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
+STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1440718369.385885
+_modified_time = 1446242487.464214
 _enable_loop = True
-_template_filename = '/Users/benmackley/Projects/AssyrianProject2/homePage/templates/login.html'
+_template_filename = '/Users/benmackley/Projects/history/homePage/templates/login.html'
 _template_uri = 'login.html'
 _source_encoding = 'ascii'
 import os, os.path, re
-_exports = ['nav', 'content']
+_exports = ['content', 'nav']
 
 
 def _mako_get_namespace(context, name):
@@ -28,10 +29,10 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def nav():
-            return render_nav(context._locals(__M_locals))
         def content():
             return render_content(context._locals(__M_locals))
+        def nav():
+            return render_nav(context._locals(__M_locals))
         form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
@@ -50,6 +51,21 @@ def render_body(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_content(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def content():
+            return render_content(context)
+        form = context.get('form', UNDEFINED)
+        __M_writer = context.writer()
+        __M_writer('\n\n    <div class="container">\n        <center>\n        <div class="card indigo">\n            <div class="card-content white-text">\n                <span class="card-title">Login</span>\n                <span class="white-text">\n                <form method="POST" action = "/homePage/login">\n                  ')
+        __M_writer(str( form ))
+        __M_writer('\n                  <button class="btn waves-effect waves-light grey darken-1" type="submit" value ="submit"name="action">Submit\n                  </button> \n                </form>\n                </span>\n            </div>\n        </div>\n        </center>\n    </div>\n')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_nav(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
@@ -62,23 +78,8 @@ def render_nav(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_content(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def content():
-            return render_content(context)
-        form = context.get('form', UNDEFINED)
-        __M_writer = context.writer()
-        __M_writer('\n\n    <div class="container">\n        <center>\n        <div class="card indigo">\n            <div class="card-content white-text">\n                <span class="card-title">Login</span>\n                <span class="white-text">\n                <form method="POST" action = "/homepage/login">\n                  ')
-        __M_writer(str( form ))
-        __M_writer('\n                  <button class="btn waves-effect waves-light grey darken-1" type="submit" value ="submit"name="action">Submit\n                  </button> \n                </form>\n                </span>\n            </div>\n        </div>\n        </center>\n    </div>\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 """
 __M_BEGIN_METADATA
-{"uri": "login.html", "line_map": {"80": 74, "65": 13, "59": 2, "53": 2, "73": 22, "72": 13, "47": 31, "42": 12, "27": 0, "74": 22, "37": 1}, "filename": "/Users/benmackley/Projects/AssyrianProject2/homePage/templates/login.html", "source_encoding": "ascii"}
+{"uri": "login.html", "source_encoding": "ascii", "filename": "/Users/benmackley/Projects/history/homePage/templates/login.html", "line_map": {"48": 31, "81": 75, "75": 2, "38": 1, "54": 13, "69": 2, "43": 12, "28": 0, "61": 13, "62": 22, "63": 22}}
 __M_END_METADATA
 """
