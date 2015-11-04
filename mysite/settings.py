@@ -34,7 +34,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')  
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')  
 
 MIDDLEWARE_CLASSES = (
     # put your django middleware here - I'm listing some common ones
