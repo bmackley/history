@@ -1,16 +1,17 @@
 # -*- coding:ascii -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
+STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1438766652.714768
+_modified_time = 1446759657.537765
 _enable_loop = True
-_template_filename = '/Users/benmackley/Projects/AssyrianProject2/base_app/templates/base_template.htm'
+_template_filename = '/Users/benmackley/Projects/history/base_app/templates/base_template.htm'
 _template_uri = 'base_template.htm'
 _source_encoding = 'ascii'
 import os, os.path, re
-_exports = ['header', 'content', 'footer', 'head']
+_exports = ['content', 'head', 'footer', 'header']
 
 
 from base_app import static_files 
@@ -21,16 +22,16 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def head():
-            return render_head(context._locals(__M_locals))
         def footer():
             return render_footer(context._locals(__M_locals))
         self = context.get('self', UNDEFINED)
+        request = context.get('request', UNDEFINED)
         def header():
             return render_header(context._locals(__M_locals))
         def content():
             return render_content(context._locals(__M_locals))
-        request = context.get('request', UNDEFINED)
+        def head():
+            return render_head(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n')
@@ -58,21 +59,9 @@ def render_body(context,**pageargs):
             context['self'].footer(**pageargs)
         
 
-        __M_writer('\n\n</body>\n\t    \n</html>\n\n')
+        __M_writer('\n\n</body>\n      \n</html>\n\n')
         __M_writer(str( static_renderer.get_template_js(request, context)  ))
         __M_writer('\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
-def render_header(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def header():
-            return render_header(context)
-        __M_writer = context.writer()
-        __M_writer('\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -90,6 +79,24 @@ def render_content(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_head(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        static_renderer = context.get('static_renderer', UNDEFINED)
+        def head():
+            return render_head(context)
+        request = context.get('request', UNDEFINED)
+        __M_writer = context.writer()
+        __M_writer('\n  <head>\n    <title>\n    Assyrian Project\n    </title>\n    \n    <!-- Meta -->\n')
+        __M_writer('    ')
+        __M_writer(str( static_renderer.get_template_css(request, context)  ))
+        __M_writer(' \n  ')
+        __M_writer('\n  ')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_footer(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
@@ -102,19 +109,13 @@ def render_footer(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_head(context,**pageargs):
+def render_header(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        request = context.get('request', UNDEFINED)
-        static_renderer = context.get('static_renderer', UNDEFINED)
-        def head():
-            return render_head(context)
+        def header():
+            return render_header(context)
         __M_writer = context.writer()
-        __M_writer('\n  <head>\n    <title>\n\t\tAssyrian Project\n    </title>\n    \n    <!-- Meta -->\n')
-        __M_writer('    ')
-        __M_writer(str( static_renderer.get_template_css(request, context)  ))
-        __M_writer(' \n\t')
-        __M_writer('\n  ')
+        __M_writer('\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -122,6 +123,6 @@ def render_head(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "base_template.htm", "filename": "/Users/benmackley/Projects/AssyrianProject2/base_app/templates/base_template.htm", "source_encoding": "ascii", "line_map": {"115": 18, "69": 21, "75": 21, "16": 5, "81": 25, "18": 19, "99": 28, "20": 0, "87": 25, "93": 28, "35": 3, "36": 5, "37": 6, "41": 6, "46": 20, "113": 10, "114": 18, "51": 23, "116": 18, "117": 19, "105": 10, "56": 27, "123": 117, "61": 30, "62": 37, "63": 37}}
+{"line_map": {"64": 37, "70": 25, "76": 25, "17": 5, "82": 10, "19": 19, "21": 0, "100": 28, "90": 10, "91": 18, "92": 18, "93": 18, "94": 19, "36": 3, "37": 5, "38": 6, "42": 6, "47": 20, "112": 21, "52": 23, "118": 21, "57": 27, "124": 118, "106": 28, "62": 30, "63": 37}, "filename": "/Users/benmackley/Projects/history/base_app/templates/base_template.htm", "uri": "base_template.htm", "source_encoding": "ascii"}
 __M_END_METADATA
 """

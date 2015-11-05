@@ -5,13 +5,13 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1446242487.464214
+_modified_time = 1446737713.502876
 _enable_loop = True
 _template_filename = '/Users/benmackley/Projects/history/homePage/templates/login.html'
 _template_uri = 'login.html'
 _source_encoding = 'ascii'
 import os, os.path, re
-_exports = ['content', 'nav']
+_exports = ['content']
 
 
 def _mako_get_namespace(context, name):
@@ -31,16 +31,9 @@ def render_body(context,**pageargs):
         __M_locals = __M_dict_builtin(pageargs=pageargs)
         def content():
             return render_content(context._locals(__M_locals))
-        def nav():
-            return render_nav(context._locals(__M_locals))
         form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n')
-        if 'parent' not in context._data or not hasattr(context._data['parent'], 'nav'):
-            context['self'].nav(**pageargs)
-        
-
-        __M_writer('\n')
+        __M_writer('\n\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'content'):
             context['self'].content(**pageargs)
         
@@ -58,7 +51,7 @@ def render_content(context,**pageargs):
             return render_content(context)
         form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n\n    <div class="container">\n        <center>\n        <div class="card indigo">\n            <div class="card-content white-text">\n                <span class="card-title">Login</span>\n                <span class="white-text">\n                <form method="POST" action = "/homePage/login">\n                  ')
+        __M_writer('\n\n    <div class="container">\n        <center>\n        <div class="card indigo">\n            <div class="card-content white-text">\n                <span class="card-title">Login</span>\n                <span class="white-text">\n                <form method="POST" action = "/homePage/hotspots">\n                  ')
         __M_writer(str( form ))
         __M_writer('\n                  <button class="btn waves-effect waves-light grey darken-1" type="submit" value ="submit"name="action">Submit\n                  </button> \n                </form>\n                </span>\n            </div>\n        </div>\n        </center>\n    </div>\n')
         return ''
@@ -66,20 +59,8 @@ def render_content(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_nav(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def nav():
-            return render_nav(context)
-        __M_writer = context.writer()
-        __M_writer('\n  <nav>\n   <div class="nav-wrapper black">\n     <div class="row">\n        <div class="col s3 offset-s1 grid-example"><a href="/" class="brand-logo">Logo</a></div>\n         <div class="col s3 offset-s8 grid-example">  \n        </div>\n      </div>\n    </div>\n  </nav>\n')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 """
 __M_BEGIN_METADATA
-{"uri": "login.html", "source_encoding": "ascii", "filename": "/Users/benmackley/Projects/history/homePage/templates/login.html", "line_map": {"48": 31, "81": 75, "75": 2, "38": 1, "54": 13, "69": 2, "43": 12, "28": 0, "61": 13, "62": 22, "63": 22}}
+{"line_map": {"36": 1, "54": 3, "55": 12, "56": 12, "41": 21, "28": 0, "62": 56, "47": 3}, "filename": "/Users/benmackley/Projects/history/homePage/templates/login.html", "uri": "login.html", "source_encoding": "ascii"}
 __M_END_METADATA
 """
