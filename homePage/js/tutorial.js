@@ -3,7 +3,7 @@ console.log('tutorial')
 $(function(){
 	var tutorial_image = $('#animate_img');
 	box_width = (Math.floor(tutorial_image.width()) * .29)
-	box_height = (tutorial_image.height() * .12)
+	box_height = (tutorial_image.height() * .225)
 	box_top = tutorial_image.offset().top + box_height
 	box_left = tutorial_image.offset().left + box_width
 	$("#animate_box").css({"background-color": "rgba(0, 0, 0, 0.5)", "position": "absolute", "top": box_top, "left": box_left,});

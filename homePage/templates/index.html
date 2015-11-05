@@ -43,7 +43,7 @@
      <div class="modal-content">
       <h1 style ="color: black;"> Create Account </h1>
         <form method ="POST" action = "/homePage/create_user">
-          <span class="amber-text">
+          <span class="black-text">
              <div class="input-field col s12">
               <tr><th><label for="id_username">Username:</label></th><td><input class="form-control" id="id_username" name="username" type="text" /></td></tr>
             </div>
@@ -67,16 +67,18 @@
      <div class="modal-content">
      <h1 style ="color: black;"> Login to Your Account </h1>
         <form method ="POST" action = "/homePage/login">
-        <div class="row">
-          <div class="input-field col s12">
-            <label for="id_username">Username:</label><input id="id_username" name="username" type="text" />
+          <span class="black-text">
+          <div class="row">
+            <div class="input-field col s12">
+              <label for="id_username">Username:</label><input id="id_username" name="username" type="text" />
+            </div>
+            <div class="input-field col s12">
+              <label for="id_password">Password:</label><input id="id_password" name="password" type="password" />
+            </div>
           </div>
-          <div class="input-field col s12">
-            <label for="id_password">Password:</label><input id="id_password" name="password" type="password" />
-          </div>
-        </div>
-         <button class="btn waves-effect waves-light grey darken-1" type="submit" value ="submit" name="action">Submit
-                  </button> 
+           <button class="btn waves-effect waves-light grey darken-1" type="submit" value ="submit" name="action">Submit
+                    </button> 
+          </span>
         </form>
       </div>
     </div>

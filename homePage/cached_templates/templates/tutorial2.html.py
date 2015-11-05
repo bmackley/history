@@ -1,12 +1,13 @@
 # -*- coding:ascii -*-
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
+STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1445553349.517203
+_modified_time = 1446674977.100199
 _enable_loop = True
-_template_filename = '/Users/benmackley/Projects/AssyrianProject2/homePage/templates/tutorial2.html'
+_template_filename = '/Users/benmackley/Projects/history/homePage/templates/tutorial2.html'
 _template_uri = 'tutorial2.html'
 _source_encoding = 'ascii'
 import os, os.path, re
@@ -48,7 +49,7 @@ def render_content(context,**pageargs):
         def content():
             return render_content(context)
         __M_writer = context.writer()
-        __M_writer('\n<center><h1>How to Identify Hotspots</h1>\n   <div class = "row">\n  <!-- Block to Show Animation -->\n    <div class="col s6 m4 offset-m1 l3 offset-l2">\n      <div id="animate">\n        <div class="card medium">\n            <div class="card-image">\n              <img id = "animate_img" src ="/static/homepage/images/Tutorial_character.jpeg" > \n            </div>\n            <div class="card-content">\n              The most important part is creating the hotspots for each character. \n            </div>\n            <div class="card-action">\n               <a class="animate waves-effect waves-teal btn-flat">Animate</a>\n            </div>\n        </div>\n      </div>\n      <div id ="animate_box">\n      </div>\n    </div>\n  <!-- User test block -->\n    <div class="col s6 m4 offset-m2 l3 offset-l2">\n        <div class="card medium">\n          <div class="card-image">\n            <div id="hb-map-wrap">\n              <img id="Tablet1" src ="/static/homepage/images/Tutorial_character.jpeg" > \n            </div>\n          </div>\n          <div class="card-content">\n            Try it out! Click and drag the mouse to create a hotspot that covers the whole character.  \n          </div>\n          <div id ="check_hotspot" class="card-action">\n            <a href="#">Check Hotspot</a>\n          </div>\n      </div>\n  </div>\n \n\n<div id="modal_continue" class="modal">\n    <div class="modal-content">\n      <p>Great! Time to move on to the last step!  </p>\n    </div>\n    <div class="modal-footer">\n      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Let&#8217;s Go!</a>\n    </div>\n  </div>\n\n\n\n\n\n<script src="/static/homepage/js/lib/jquery.min.js"></script>\n<script src="/static/homepage/js/lib/colorpicker.js"></script>\n<script src="/static/homepage/js/hotspot-map-editor.js"></script>\n<script src="/static/homepage/js/hotspot-map.min.js"></script>\n<script src="/static/homepage/js/tutorial.js"></script>\n<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>\n<script src="/static/base_app/styles/plugins/bootstrap/js/bootstrap.js">\n\n')
+        __M_writer('\n<center><h1>How to Identify Hotspots</h1>\n   <div class = "row">\n  <!-- Block to Show Animation -->\n    <div class="col s6 m4 offset-m1 l3 offset-l2">\n      <div id="animate">\n        <div class="card medium">\n            <div class="card-image">\n              <img id = "animate_img" src ="/static/homePage/images/Tutorial_character.jpeg" > \n            </div>\n            <div class="card-content">\n              The most important part is creating the hotspots for each character. \n            </div>\n            <div class="card-action">\n               <a class="animate waves-effect waves-teal btn-flat">Animate</a>\n            </div>\n        </div>\n      </div>\n      <div id ="animate_box">\n      </div>\n    </div>\n  <!-- User test block -->\n    <div class="col s6 m4 offset-m2 l3 offset-l2">\n        <div class="card medium">\n          <div class="card-image">\n            <div id="hb-map-wrap">\n              <img id="Tablet1" src ="/static/homePage/images/Tutorial_character.jpeg" > \n            </div>\n          </div>\n          <div class="card-content">\n            Try it out! Click and drag the mouse to create a hotspot that covers the whole character.  \n          </div>\n          <div id ="check_hotspot" class="card-action">\n            <a href="#">Check Hotspot</a>\n          </div>\n      </div>\n  </div>\n \n\n<div id="modal_continue" class="modal">\n    <div class="modal-content">\n      <p>Great! Time to move on to the last step!  </p>\n    </div>\n    <div class="modal-footer">\n      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Let&#8217;s Go!</a>\n    </div>\n  </div>\n\n\n\n\n\n<script src="/static/homePage/js/lib/jquery.min.js"></script>\n<script src="/static/homePage/js/lib/colorpicker.js"></script>\n<script src="/static/homePage/js/hotspot-map-editor.js"></script>\n<script src="/static/homePage/js/hotspot-map.min.js"></script>\n<script src="/static/homePage/js/tutorial.js"></script>\n<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>\n<script src="/static/base_app/styles/plugins/bootstrap/js/bootstrap.js">\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -56,6 +57,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"source_encoding": "ascii", "filename": "/Users/benmackley/Projects/AssyrianProject2/homePage/templates/tutorial2.html", "uri": "tutorial2.html", "line_map": {"51": 2, "34": 1, "35": 1, "57": 51, "27": 0, "45": 2}}
+{"uri": "tutorial2.html", "source_encoding": "ascii", "filename": "/Users/benmackley/Projects/history/homePage/templates/tutorial2.html", "line_map": {"35": 1, "36": 1, "52": 2, "58": 52, "28": 0, "46": 2}}
 __M_END_METADATA
 """
