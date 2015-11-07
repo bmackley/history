@@ -5,13 +5,13 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1446758329.885723
+_modified_time = 1446852050.115209
 _enable_loop = True
 _template_filename = '/Users/benmackley/Projects/history/homePage/templates/base.htm'
 _template_uri = 'base.htm'
 _source_encoding = 'ascii'
 import os, os.path, re
-_exports = ['content', 'head', 'footer', 'nav']
+_exports = ['head', 'footer', 'content', 'nav']
 
 
 import datetime 
@@ -31,16 +31,16 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        def footer():
-            return render_footer(context._locals(__M_locals))
         def nav():
             return render_nav(context._locals(__M_locals))
-        user = context.get('user', UNDEFINED)
-        request = context.get('request', UNDEFINED)
-        def content():
-            return render_content(context._locals(__M_locals))
         def head():
             return render_head(context._locals(__M_locals))
+        def content():
+            return render_content(context._locals(__M_locals))
+        request = context.get('request', UNDEFINED)
+        user = context.get('user', UNDEFINED)
+        def footer():
+            return render_footer(context._locals(__M_locals))
         __M_writer = context.writer()
         __M_writer('\n')
         __M_writer('\n\n\n')
@@ -63,27 +63,15 @@ def render_body(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
-def render_content(context,**pageargs):
-    __M_caller = context.caller_stack._push_frame()
-    try:
-        def content():
-            return render_content(context)
-        __M_writer = context.writer()
-        __M_writer('\n \n  ')
-        return ''
-    finally:
-        context.caller_stack._pop_frame()
-
-
 def render_head(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         def head():
             return render_head(context)
+        request = context.get('request', UNDEFINED)
         user = context.get('user', UNDEFINED)
         def nav():
             return render_nav(context)
-        request = context.get('request', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n<head>\n  <meta charset="UTF-8" />\n\n  <title>Hotspot</title>\n\n  <meta name="description" content="" />\n  <meta name="keywords" value="" />\n  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>\n \t<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>\n  <link rel="stylesheet" href="/static/homePage/css/layout.css" type="text/css" />\n  <link rel="stylesheet" href="/static/homePage/css/hotspot-map-editor.css" type="text/css" />\n  <!--<link rel="stylesheet" href="/static/homePage/css/hotspot-map.min.css" type="text/css" />-->\n  <link rel="stylesheet" href="/static/homePage/css/materialize.css" type="text/css" />\n  <link rel="stylesheet" href="/static/homePage/css/tipped.css" type="text/css" />\n  <link rel="stylesheet" href="/static/homePage/css/jquery.qtip.css" type="text/css" />\n  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">\n  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">\n   <link rel="stylesheet" href="/static/homePage/css/screen.css" type="text/css" />\n     <style>\n#draggable1, #draggable2, #draggable3 { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }\n#droppable { width: 300px; height: 300px; padding: 0.5em; float: left; margin: 10px; }\n</style>\n<script>\n\n</script>\n  <body>\n</head>\n')
         if 'parent' not in context._data or not hasattr(context._data['parent'], 'nav'):
@@ -111,15 +99,27 @@ def render_footer(context,**pageargs):
         context.caller_stack._pop_frame()
 
 
+def render_content(context,**pageargs):
+    __M_caller = context.caller_stack._push_frame()
+    try:
+        def content():
+            return render_content(context)
+        __M_writer = context.writer()
+        __M_writer('\n \n  ')
+        return ''
+    finally:
+        context.caller_stack._pop_frame()
+
+
 def render_nav(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
+        request = context.get('request', UNDEFINED)
         user = context.get('user', UNDEFINED)
         def nav():
             return render_nav(context)
-        request = context.get('request', UNDEFINED)
         __M_writer = context.writer()
-        __M_writer('\n  <!-- Dropdown Structure -->\n  <ul id="dropdown1" class="dropdown-content">\n    <li><a href="#!">Profile</a></li>\n    <li><a href="#!">Logout</a></li>\n    <li><a href="#!">three</a></li>\n  </ul>\n  <nav>\n   <div class="nav-wrapper black">\n     <div class="row">\n        <div class="col s3 offset-s1 m3 offset-m3 l3 offset-l1 grid-example"><a href="/" class="brand-logo">Assyrian Project</a></div>\n         <div class="col s2 offset-s10 m3 offset-m8 l3 offset-l8 grid-example">  \n          <ul id="nav-mobile" class="right">\n')
+        __M_writer('\n  <!-- Dropdown Structure -->\n  <ul id="dropdown1" class="dropdown-content">\n    <li><a href="/homePage/profile">Profile</a></li>\n    <li><a href="/homePage/index/logout">Logout</a></li>\n    <li><a href="/homePage/hotspots">Hotspots</a></li>\n  </ul>\n  <nav>\n   <div class="nav-wrapper black">\n     <div class="row">\n        <div class="col s3 offset-s1 m3 offset-m3 l3 offset-l1 grid-example"><a href="/" class="brand-logo">Assyrian Project</a></div>\n         <div class="col s2 offset-s10 m3 offset-m8 l3 offset-l8 grid-example">  \n          <ul id="nav-mobile" class="right">\n')
         if request.user.is_authenticated():
             __M_writer('              <li><a class="dropdown-button" href="#!" data-activates="dropdown1">')
             __M_writer(str(user))
@@ -134,6 +134,6 @@ def render_nav(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"line_map": {"128": 50, "129": 53, "66": 103, "135": 129, "72": 103, "78": 6, "17": 129, "88": 6, "93": 100, "30": 0, "99": 107, "105": 107, "106": 129, "107": 130, "108": 130, "45": 1, "46": 3, "114": 34, "51": 101, "56": 105, "122": 34, "123": 47, "124": 48, "125": 48, "126": 48, "127": 49}, "filename": "/Users/benmackley/Projects/history/homePage/templates/base.htm", "uri": "base.htm", "source_encoding": "ascii"}
+{"line_map": {"128": 50, "129": 53, "66": 6, "135": 129, "76": 6, "81": 100, "87": 107, "93": 107, "94": 129, "95": 130, "96": 130, "102": 103, "17": 129, "108": 103, "45": 1, "46": 3, "114": 34, "51": 101, "30": 0, "56": 105, "122": 34, "123": 47, "124": 48, "125": 48, "126": 48, "127": 49}, "filename": "/Users/benmackley/Projects/history/homePage/templates/base.htm", "source_encoding": "ascii", "uri": "base.htm"}
 __M_END_METADATA
 """

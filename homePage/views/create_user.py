@@ -15,6 +15,7 @@ def process_request(request):
         return HttpResponseRedirect('/')
     createForm = CreateUserForm()
     if request.method == "POST":
+        print('1')
         createForm = CreateUserForm(request.POST)
         if createForm.is_valid():
             newUser = m.User()
@@ -23,7 +24,12 @@ def process_request(request):
             newUser.email = createForm.cleaned_data['email']
             newUser.password = createForm.cleaned_data['password']
             newUser.save()
-            return HttpResponseRedirect('/homePage/tutorial')
+            # userN = createForm.cleaned_data['username'].lower()
+            print(newUser)
+            userN = m.User.objects.get(username = createForm.cleaned_data['username'])
+            userN.backend = 'django.contrib.auth.backends.ModelBackend'
+            login(request, userN)
+            return HttpResponseRedirect('/homePage/tutorial/')
     if request.urlparams[0] == "about":
         return templater.render_to_response(request, 'about.html')
 

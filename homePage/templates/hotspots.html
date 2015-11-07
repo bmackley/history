@@ -43,8 +43,11 @@
 %endif
 </div>
 %if request.user.is_authenticated():
+  <center><h3>Tag characters and match the correct sign to the character. </h3></center>
+<!--
 <div class="row">
       <div class="col col s2 offset-s10"><i class="fa fa-angle-right fa-5x"></i>
+-->
 </div>
 </div>
 <div id="shell" data-username=${request.user}>
@@ -135,9 +138,6 @@
       <div class="clear"></div>
     </div>
     
-    <div class="hb-main-wrap" id="submit-wrap">
-      <div id="hotspot_form" class="ndd-button-green-regular">Save</div>
-    </div>
 	<!--
     <div id="hb-bottom-wrap" class="hb-main-wrap">
       <h1>Live Preview</h1>

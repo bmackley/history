@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1446674241.172291
+_modified_time = 1446851401.124299
 _enable_loop = True
 _template_filename = '/Users/benmackley/Projects/history/homePage/templates/index.html'
 _template_uri = 'index.html'
@@ -56,7 +56,7 @@ def render_content(context,**pageargs):
         def content():
             return render_content(context)
         __M_writer = context.writer()
-        __M_writer('\n\n')
+        __M_writer('\n  this is content\n  <br>\n  <br>\n  <br>\n  <br>\n  <br>\n  <br>\n  this is even more content\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -76,6 +76,6 @@ def render_nav(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"uri": "index.html", "source_encoding": "ascii", "filename": "/Users/benmackley/Projects/history/homePage/templates/index.html", "line_map": {"65": 2, "59": 91, "37": 1, "38": 1, "71": 2, "43": 90, "28": 0, "77": 71, "53": 91}}
+{"line_map": {"65": 2, "59": 91, "37": 1, "38": 1, "71": 2, "43": 90, "28": 0, "77": 71, "53": 91}, "filename": "/Users/benmackley/Projects/history/homePage/templates/index.html", "source_encoding": "ascii", "uri": "index.html"}
 __M_END_METADATA
 """
