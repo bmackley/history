@@ -39,6 +39,8 @@ class Sign(models.Model):
     filepath = models.TextField(blank=True, null=True)
     name = models.TextField(blank= True, null=True)
     mimeType = models.TextField()
+    def __str__(self):
+        return self.filepath
 class Character(models.Model):
     line = models.ForeignKey(Line, related_name = "TabletLine")
     positionNO = models.PositiveSmallIntegerField(blank= True, null=True)
@@ -55,6 +57,8 @@ class IdentifiedCharacter(models.Model): #change this to placement
     hotspot_y = models.PositiveSmallIntegerField(blank=True, null=True)
     hotspot_width = models.PositiveSmallIntegerField(blank=True, null=True)
     hotspot_height = models.PositiveSmallIntegerField(blank=True, null=True)
+    def __str__(self):
+        return self.link
 '''
 Stored Procedures:
 -	After a certain amount of user inputs, the database calculates the hotspots and sends the report to us.  
