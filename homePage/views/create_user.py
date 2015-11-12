@@ -14,6 +14,7 @@ def process_request(request):
         logout(request)
         return HttpResponseRedirect('/')
     createForm = CreateUserForm()
+    print(request.POST)
     if request.method == "POST":
         print('1')
         createForm = CreateUserForm(request.POST)
@@ -22,7 +23,7 @@ def process_request(request):
             print(createForm.cleaned_data['username'])
             newUser.username = createForm.cleaned_data['username']
             newUser.email = createForm.cleaned_data['email']
-            newUser.password = createForm.cleaned_data['password']
+            newUser.set_password(createForm.cleaned_data['password'])
             newUser.save()
             # userN = createForm.cleaned_data['username'].lower()
             print(newUser)

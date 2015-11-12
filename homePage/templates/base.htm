@@ -63,10 +63,10 @@
         <form method ="POST" action = "/homePage/login">
         <div class="row">
           <div class="input-field col s12">
-            <label for="id_username">Username:</label><input id="id_username" name="username" type="text" />
+            <label for="id_username">Username:</label><input class="form-control" id="id_username" name="username" type="text" />
           </div>
           <div class="input-field col s12">
-            <label for="id_password">Password:</label><input id="id_password" name="password" type="password" />
+            <label for="id_password">Password:</label><input class="form-control" id="id_password" name="password" type="password" />
           </div>
         </div>
          <button class="btn waves-effect waves-light grey darken-1" type="submit" value ="submit" name="action">Submit
@@ -79,7 +79,7 @@
     <div id="modal2" class="modal">
      <div class="modal-content">
       <h1 style ="color: black;"> Create Account </h1>
-        <form method ="POST" action = "/homePage/index/1">
+        <form method ="POST" action = "/homePage/create_user">
          <div class="input-field col s12">
           <tr><th><label for="id_username">Username:</label></th><td><input class="form-control" id="id_username" name="username" type="text" /></td></tr>
         </div>
@@ -87,6 +87,7 @@
 <tr><th><label for="id_email">Email:</label></th><td><input class="form-control" id="id_email" name="email" type="text" /></td></tr>
         </div>
          <div class="input-field col s12">
+
 <tr><th><label for="id_password">Password:</label></th><td><input class="form-control" id="id_password" name="password" type="password" /></td></tr>
         </div>
          <div class="input-field col s12">

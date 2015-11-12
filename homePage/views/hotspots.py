@@ -11,7 +11,7 @@ import datetime
 
 def process_request(request):
     if not request.user.is_authenticated():
-        return HttpResponseRedirect('/homePage/login')
+        return HttpResponseRedirect('/login')
     if request.urlparams[0] == "logout":
         print('logout')
         logout(request)

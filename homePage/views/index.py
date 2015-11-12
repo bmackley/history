@@ -42,7 +42,12 @@ def process_request(request):
                     raise forms.ValidationError("Please Enter a username") 
                 return HttpResponseRedirect('/')
     if request.urlparams[0] == "about":
-        return templater.render_to_response(request, 'about.html')
+        tvars = {
+            #'tablets': tablets,
+            'form' : form,
+            'createForm' : createForm,
+        }
+        return templater.render_to_response(request, 'about.html', tvars)
     #for the main webpage
     #tablets = m.Tablet.objects.get(name="VS 26 47")
     # for x in range(1,15):
