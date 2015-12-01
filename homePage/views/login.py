@@ -7,12 +7,9 @@ from . import templater
 
 def process_request(request):
   if request.method == 'POST':
-    print('never never never')
     form = LoginForm(request.POST)
     print(request.POST)
     if form.is_valid():
-      print(form.cleaned_data['username'])
-      print('neigh neigh')
       userN = form.cleaned_data['username'].lower()
       user = authenticate(username = userN, password = form.cleaned_data['password'])
       if user is not None:
@@ -39,3 +36,4 @@ class LoginForm(forms.Form):
     if user == None:
       raise forms.ValidationError("Incorrect password or Username") 
     return self.cleaned_data
+    

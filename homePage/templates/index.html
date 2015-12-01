@@ -42,7 +42,7 @@
     <div id="modal2" class="modal">
      <div class="modal-content">
       <h1 style ="color: black;"> Create Account </h1>
-        <form method ="POST" action = "/homePage/create_user">
+        <form method ="POST" id="create_account" action = "/homePage/create_user">
           <span class="black-text">
              <div class="input-field col s12">
               <tr><th><label for="id_username">Username:</label></th><td><input class="form-control" id="id_username" name="username" type="text" /></td></tr>
@@ -57,7 +57,7 @@
     <tr><th><label for="id_retypepassword">Re-Enter Password:</label></th><td><input class="form-control" id="id_retypepassword" name="retypepassword" type="password" /></td></tr>
             </div>
           </span>
-          <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <button class="btn waves-effect waves-light" id="create_user_submit" type="submit" name="action">Submit
          </button> 
         </form>
       </div>

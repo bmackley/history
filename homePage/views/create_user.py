@@ -14,9 +14,7 @@ def process_request(request):
         logout(request)
         return HttpResponseRedirect('/')
     createForm = CreateUserForm()
-    print(request.POST)
     if request.method == "POST":
-        print('1')
         createForm = CreateUserForm(request.POST)
         if createForm.is_valid():
             newUser = m.User()
@@ -26,8 +24,8 @@ def process_request(request):
             newUser.set_password(createForm.cleaned_data['password'])
             newUser.save()
             # userN = createForm.cleaned_data['username'].lower()
-            print(newUser)
             userN = m.User.objects.get(username = createForm.cleaned_data['username'])
+            #allows users to authenticate and to be logged in
             userN.backend = 'django.contrib.auth.backends.ModelBackend'
             login(request, userN)
             return HttpResponseRedirect('/homePage/tutorial/')
@@ -50,10 +48,9 @@ class CreateUserForm(forms.Form):
             self.request = kwargs.pop('request', None)
             super(CreateUserForm, self).__init__(*args, **kwargs)
 
-    # def clean(self):
-    #     if self.cleaned_data['username'] == "":
-    #         raise forms.ValidationError("Please enter a username to sign up")
-    #     if self.cleaned_data['password'] == "":
+    def clean(self):
+        if self.cleaned_data['email'] == "":
+            raise forms.ValidationError("No email")
     #         raise forms.ValidationError("You must enter a password.")
     #     if self.cleaned_data['password'] != self.cleaned_data['retypepassword']:
     #         raise forms.ValidationError("The passwords do not match.")

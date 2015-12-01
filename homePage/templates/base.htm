@@ -69,7 +69,7 @@
             <label for="id_password">Password:</label><input class="form-control" id="id_password" name="password" type="password" />
           </div>
         </div>
-         <button class="btn waves-effect waves-light grey darken-1" type="submit" value ="submit" name="action">Submit
+         <button class="btn waves-effect waves-light grey darken-1" id="login_submit" type="submit" value ="submit" name="action">Submit
                   </button> 
         </form>
       </div>
@@ -79,7 +79,7 @@
     <div id="modal2" class="modal">
      <div class="modal-content">
       <h1 style ="color: black;"> Create Account </h1>
-        <form method ="POST" action = "/homePage/create_user">
+        <form method ="POST" id="create_form" action = "/homePage/create_user">
          <div class="input-field col s12">
           <tr><th><label for="id_username">Username:</label></th><td><input class="form-control" id="id_username" name="username" type="text" /></td></tr>
         </div>
@@ -93,7 +93,7 @@
          <div class="input-field col s12">
 <tr><th><label for="id_retypepassword">Re-Enter Password:</label></th><td><input class="form-control" id="id_retypepassword" name="retypepassword" type="password" /></td></tr>
         </div>
-          <button class="btn waves-effect waves-light grey darken-1" type="submit" name="action">Submit
+          <button class="btn waves-effect waves-light grey darken-1" id="create_user_submit" type="submit" name="action">Submit
          </button> 
         </form>
       </div>
@@ -138,5 +138,6 @@
   <script src="/static/homePage/js/materialize.js"> </script>
    <script src="/static/homePage/js/tipped.js"> </script>
    <script src="/static/homePage/js/jquery.qtip.js"> </script>
+   <script src="/static/homePage/js/login-check.js"></script>
 </body>
 </%block>
