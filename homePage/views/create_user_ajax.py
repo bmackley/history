@@ -19,26 +19,18 @@ def process_request(request):
 	if(request.urlparams[0] == "username"):
 		try:
 			user = m.User.objects.get(username = request.urlparams[1])
-			print('username')
-			print(user.id)	
-			print(user)
 			userdata = {
 				"users" : user.id
 			}
 		except:
-			print('no user')
 			userdata = {
 				"users" : 'no users'
 			}
 		if(request.urlparams[2] == "email"):
 			try:
 				user = m.User.objects.get(email = request.urlparams[1])
-				print('email')
-				print(user.email)	
-				print(user)
 				userdata["email"] = user.email
 			except:
-				print('no email')
 				userdata["email"] = "no email"
 		return JsonResponse(userdata)
 	tvars = {

@@ -2,7 +2,7 @@ from django import forms
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.contrib.auth import authenticate, login
-from homePage import models as m 
+from homePage import models as m
 from . import templater
 
 def process_request(request):
@@ -14,11 +14,13 @@ def process_request(request):
       user = authenticate(username = userN, password = form.cleaned_data['password'])
       if user is not None:
         login(request, user)
-        redirect = request.META.get('HTTP_REFERER')
+        tvars = {
+        }
+        return templater.render_to_response(request, 'profile.html', tvars)
         #returns them to the page they were on
         return HttpResponse('<script>window.location.href="'+ redirect +'"</script>')
   else:
-    form = LoginForm()    
+    form = LoginForm()
   tvars = {
   'form' : form,
   }
@@ -34,6 +36,5 @@ class LoginForm(forms.Form):
     print(uName)
     user = authenticate(username = uName, password = self.cleaned_data['password'])
     if user == None:
-      raise forms.ValidationError("Incorrect password or Username") 
+      raise forms.ValidationError("Incorrect password or Username")
     return self.cleaned_data
-    

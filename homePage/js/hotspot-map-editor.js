@@ -314,6 +314,7 @@
 
 			// ============= DRAW =============
 			if (mouseDown && !startedDrawing) {
+				console.log('mousemove')
 				if (mox > 5 && moy > 5) {
 					startedDrawing = true;
 					drawing = true;
@@ -584,12 +585,12 @@
 				console.log('nothing to show here')
 			}
 			//create list of old hotspots not to be added to database
-		}); 
+		});
 	}
 
 	function submitForm() {
 		//variables
-		var username = $('#shell').data('username'); var is_old = false;		
+		var username = $('#shell').data('username'); var is_old = false;
 		for(var i = 0; i < spots.length; i++){
 			console.log('this is letter ' + i)
 			for(var j = 0; j < old_spots.length; j++){
@@ -598,7 +599,7 @@
 				}
 			}//for old_spots
 			if(is_old == true){
-				
+
 			}else{
 				console.log('this is my original i ' + i)
 				console.log(spots[i])
@@ -627,7 +628,7 @@
 					 	console.log(err);
 					 }//error
 				});//ajax
-			}//old_spot for	
+			}//old_spot for
 		is_old = false
 		}//for
 	}//function
@@ -653,7 +654,7 @@
 				}else{
 					console.log('this is not working');
 				}
-			});	
+			});
 		}
 	}// function updateHotspot
 	function deleteSpot(){
@@ -665,7 +666,7 @@
 						console.log(spots[i]);
 						if(selectedSpot.id == spots[i].id){
 							var deleted_spot_id = spots[i].database_id
-						}//if 
+						}//if
 					}//for
 					console.log(spots[i])
 					$.ajax({
@@ -689,7 +690,7 @@
 						if(selectedSpot.id == old_spots[i].id){
 							var deleted_spot_id = old_spots[i].database_id
 							console.log(old_spots[i.database_id])
-						}//if 
+						}//if
 					}//for
 					$.ajax({
 						url: '/homePage/hotspot_delete/' + deleted_spot_id,
@@ -720,7 +721,7 @@
 		        selectedSpot.root.removeClass("matched-hb-rect-spot");
 		     	selectedSpot.root.append(scaleHandle);
 				selectedSpot.root.append(moveHandle);
-				selectedSpot.root.find('.hb-tooltip').html('<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green complete side-show"><i class="fa fa-check-circle"></i></a></span>');  //this.settings['content'] '<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green disableHotspot side-show"><i class="fa fa-pencil-square-o"></i></a><a class="btn-floating green side-show"><i class="fa fa-check-circle"></i></a></span>'    
+				selectedSpot.root.find('.hb-tooltip').html('<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green complete side-show"><i class="fa fa-check-circle"></i></a></span>');  //this.settings['content'] '<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green disableHotspot side-show"><i class="fa fa-pencil-square-o"></i></a><a class="btn-floating green side-show"><i class="fa fa-check-circle"></i></a></span>'
 				deleteSpot();
 				completeSpot();
 			}
@@ -735,7 +736,7 @@
 	        selectedSpot.root.addClass("matched-hb-rect-spot");
 	     	selectedSpot.root.find('.hb-move-handle').remove();
 	     	selectedSpot.root.find('.hb-scale-handle').remove();
-	     	selectedSpot.root.find('.hb-tooltip').html('<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green edit side-show"><i class="fa fa-pencil-square-o"></i></a></span>');  //this.settings['content'] '<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green disableHotspot side-show"><i class="fa fa-pencil-square-o"></i></a><a class="btn-floating green side-show"><i class="fa fa-check-circle"></i></a></span>'    
+	     	selectedSpot.root.find('.hb-tooltip').html('<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green edit side-show"><i class="fa fa-pencil-square-o"></i></a></span>');  //this.settings['content'] '<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green disableHotspot side-show"><i class="fa fa-pencil-square-o"></i></a><a class="btn-floating green side-show"><i class="fa fa-check-circle"></i></a></span>'
 			deleteSpot();
 			editSpot()
 		})
@@ -807,7 +808,7 @@
 	           		"background-size" : "100% 100%",
 	           	});
 	           	console.log($(this))
-	           	$(this).find('.hb-tooltip').html('<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green edit side-show"><i class="fa fa-pencil-square-o"></i></a></span>');  //this.settings['content'] '<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green disableHotspot side-show"><i class="fa fa-pencil-square-o"></i></a><a class="btn-floating green side-show"><i class="fa fa-check-circle"></i></a></span>'    
+	           	$(this).find('.hb-tooltip').html('<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green edit side-show"><i class="fa fa-pencil-square-o"></i></a></span>');  //this.settings['content'] '<span style="display: inline"><a class="btn-floating red delete side-show"><i class="fa fa-trash"></i></a><a class="btn-floating green disableHotspot side-show"><i class="fa fa-pencil-square-o"></i></a><a class="btn-floating green side-show"><i class="fa fa-check-circle"></i></a></span>'
 	            editSpot();
 	            $.ajax({
 	                url: '/homePage/hotspot_ajax_form/' + 'match' + '/' + Math.floor($(this).position().top) + '/' + Math.floor($(this).position().left) + '/' + currentDraggable.dataset.id,
@@ -854,7 +855,7 @@
 		})();
 		toggle_tooltip();
 		deleteSpot();
-	}//end function 
+	}//end function
 	//MATCH THE CHARACTERS TOGETHER  From http://www.codeproject.com/Articles/683252/Accept-only-the-latest-dropped-draggable-in-a-drop
 	$(function () {
 	    var pastDraggable = "";
@@ -869,7 +870,7 @@
 		     revertDuration: 0,
 		    });
 	    }
-	
+
 	    $(".hb-rect-spot").droppable({
 	        //Event to accept a draggable when dropped on the droppable
 	        drop: function (event, ui) {

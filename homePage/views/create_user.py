@@ -13,18 +13,21 @@ def process_request(request):
     if request.urlparams[0] == "logout":
         logout(request)
         return HttpResponseRedirect('/')
+    if request.user.is_authenticated():
+        return HttpResponseRedirect('/homePage/hotspots')
     createForm = CreateUserForm()
     if request.method == "POST":
         createForm = CreateUserForm(request.POST)
         if createForm.is_valid():
             newUser = m.User()
             print(createForm.cleaned_data['username'])
-            newUser.username = createForm.cleaned_data['username']
+            print(createForm.cleaned_data['username'].lower())
+            newUser.username = createForm.cleaned_data['username'].lower()
             newUser.email = createForm.cleaned_data['email']
             newUser.set_password(createForm.cleaned_data['password'])
             newUser.save()
             # userN = createForm.cleaned_data['username'].lower()
-            userN = m.User.objects.get(username = createForm.cleaned_data['username'])
+            userN = m.User.objects.get(username = createForm.cleaned_data['username'].lower())
             #allows users to authenticate and to be logged in
             userN.backend = 'django.contrib.auth.backends.ModelBackend'
             login(request, userN)

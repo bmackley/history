@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1446851958.518715
+_modified_time = 1453331501.919867
 _enable_loop = True
 _template_filename = '/Users/benmackley/Projects/history/homePage/templates/profile.html'
 _template_uri = 'profile.html'
@@ -49,7 +49,7 @@ def render_content(context,**pageargs):
         def content():
             return render_content(context)
         __M_writer = context.writer()
-        __M_writer('\n<center><h1>Your User Profile Page </h1><br><br><br> coming 12/4/2015</center> \n')
+        __M_writer('\n<center><h1>Your User Profile Page </h1><br><br><br> coming 3/5/2016</center> <br></br>\n<center>\n\t<a class="waves-effect waves-light btn-large" href = "/homePage/hotspots">Start tagging images</a> \n</center>\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -57,6 +57,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"line_map": {"35": 1, "36": 1, "52": 3, "58": 52, "28": 0, "46": 3}, "filename": "/Users/benmackley/Projects/history/homePage/templates/profile.html", "source_encoding": "ascii", "uri": "profile.html"}
+{"line_map": {"35": 1, "36": 1, "52": 3, "58": 52, "28": 0, "46": 3}, "uri": "profile.html", "source_encoding": "ascii", "filename": "/Users/benmackley/Projects/history/homePage/templates/profile.html"}
 __M_END_METADATA
 """

@@ -98,11 +98,10 @@
 	position: absolute;
 	display: block;
 	content: "";
-	left: -4px;
-	top: -4px;
 	width: 100%;
 	height: 100%;
 	border: 1px dashed #222;
+	border-color: white;
 	padding: 3px;
 }
 #hb-settings-wrap {
@@ -193,7 +192,7 @@ h2 { font-size: 14px; line-height: 18px; }
 .hb-spot-object.left .hb-tooltip-wrap {
 	right: 100%;
 	top: 0;
-	padding-right: 16px;
+	padding-right: 8px;
 }
 .hb-spot.left .hb-tooltip-wrap {
 	top: -12px;
