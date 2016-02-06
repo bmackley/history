@@ -5,7 +5,7 @@ STOP_RENDERING = runtime.STOP_RENDERING
 __M_dict_builtin = dict
 __M_locals_builtin = locals
 _magic_number = 10
-_modified_time = 1453332898.179341
+_modified_time = 1454793939.792992
 _enable_loop = True
 _template_filename = '/Users/benmackley/Projects/history/homePage/templates/hotspots.html'
 _template_uri = 'hotspots.html'
@@ -29,12 +29,12 @@ def render_body(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
         __M_locals = __M_dict_builtin(pageargs=pageargs)
-        form = context.get('form', UNDEFINED)
-        sign = context.get('sign', UNDEFINED)
         request = context.get('request', UNDEFINED)
         def content():
             return render_content(context._locals(__M_locals))
+        characters = context.get('characters', UNDEFINED)
         identifiedChars = context.get('identifiedChars', UNDEFINED)
+        form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
         __M_writer(' ')
         __M_writer('\n\n\n<!DOCTYPE html>\n <html lang="en" class="no-js">\n  <meta charset="UTF-8" />\n\n  <title>Hotspot</title>\n\n  <meta name="description" content="" />\n  <meta name="keywords" value="" />\n\n  <link rel="stylesheet" href="/static/homePage/css/layout.css" type="text/css" />\n  <link rel="stylesheet" href="/static/homePage/css/hotspot-map-editor.css" type="text/css" />\n  <!--Minify file above for production\n  <link rel="stylesheet" href="/static/homePage/css/hotspot-map.min.css" type="text/css" /> \n  -->\n  <link rel="stylesheet" href="/static/homePage/css/lib/colorpicker.css" type="text/css" />\n  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">\n\n  <script src="/static/homePage/js/lib/modernizr-2.min.js"> </script>\n\n</head>\n<body>\n')
@@ -50,12 +50,12 @@ def render_body(context,**pageargs):
 def render_content(context,**pageargs):
     __M_caller = context.caller_stack._push_frame()
     try:
-        form = context.get('form', UNDEFINED)
-        sign = context.get('sign', UNDEFINED)
         request = context.get('request', UNDEFINED)
         def content():
             return render_content(context)
+        characters = context.get('characters', UNDEFINED)
         identifiedChars = context.get('identifiedChars', UNDEFINED)
+        form = context.get('form', UNDEFINED)
         __M_writer = context.writer()
         __M_writer('\n')
         if identifiedChars == 'no characters':
@@ -91,16 +91,16 @@ def render_content(context,**pageargs):
             __M_writer('   <div>\n    <form method="POST">\n        ')
             __M_writer(str( form ))
             __M_writer('\n        <div class="row">\n        <br>\n          <div class="col-md-7">\n            <input type="submit" value="Sign In" class="btn btn-cta-secondary pull-right push-bottom" data-loading-text="Loading...">\n          </div>\n        </div>\n      </form>\n    </div>\n')
-        __M_writer('</div>\n<div id = "Assyrian_sign" class = "inline" style = " bottom: 0px; background-color: rgb(238,233,233); position: fixed; width: 100%; z-index: 10000">\n  <ul class="social-icons list-inline draggable-char col-md-12 col-sm-12 col-xs-12">\n')
-        for object in sign:
+        __M_writer('</div>\n<div id = "Assyrian_sign" class = "inline" style = " bottom: 0px; background-color: black; position: fixed; width: 100%; z-index: 10000">\n  <ul class="social-icons list-inline draggable-char col-md-12 col-sm-12 col-xs-12">\n')
+        for object in characters:
             __M_writer('      <li><img id = "Sign')
-            __M_writer(str(object.id))
+            __M_writer(str(object.Sign.id))
             __M_writer('" data-id = ')
-            __M_writer(str(object.id))
+            __M_writer(str(object.Sign.id))
             __M_writer(' class = "Individual_signs" src="')
-            __M_writer(str(object.filepath))
+            __M_writer(str(object.Sign))
             __M_writer('"></li>\n')
-        __M_writer('  </ul>\n</div>\n  <script src="/static/homePage/js/lib/jquery.min.js"></script>\n<script src="/static/homePage/js/lib/colorpicker.js"></script>\n  <script src="/static/homePage/js/hotspot-map-editor.js"></script>\n  <script src="/static/homePage/js/hotspot-map.min.js"></script>\n  <script src="/static/homePage/js/signs.js"></script>\n  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>\n</body>\n\n')
+        __M_writer('  </ul>\n</div>\n  <script src="/static/homePage/js/lib/jquery.min.js"></script>\n<script src="/static/homePage/js/lib/colorpicker.js"></script>\n  <script src="/static/homePage/js/hotspot-map-editor.js"></script>\n  <script src="/static/homePage/js/hotspot-map.min.js"></script>\n  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>\n</body>\n\n')
         return ''
     finally:
         context.caller_stack._pop_frame()
@@ -108,6 +108,6 @@ def render_content(context,**pageargs):
 
 """
 __M_BEGIN_METADATA
-{"line_map": {"28": 0, "39": 1, "40": 1, "50": 25, "60": 25, "61": 26, "62": 27, "63": 28, "64": 29, "65": 30, "66": 30, "67": 30, "68": 31, "69": 31, "70": 32, "71": 32, "72": 33, "73": 33, "74": 34, "75": 34, "76": 35, "77": 35, "78": 36, "79": 37, "80": 38, "81": 39, "82": 39, "83": 39, "84": 41, "85": 44, "86": 45, "87": 46, "88": 53, "89": 53, "90": 163, "91": 164, "92": 166, "93": 166, "94": 176, "95": 179, "96": 180, "97": 180, "98": 180, "99": 180, "100": 180, "101": 180, "102": 180, "103": 182, "109": 103}, "uri": "hotspots.html", "source_encoding": "ascii", "filename": "/Users/benmackley/Projects/history/homePage/templates/hotspots.html"}
+{"filename": "/Users/benmackley/Projects/history/homePage/templates/hotspots.html", "line_map": {"28": 0, "39": 1, "40": 1, "50": 25, "60": 25, "61": 26, "62": 27, "63": 28, "64": 29, "65": 30, "66": 30, "67": 30, "68": 31, "69": 31, "70": 32, "71": 32, "72": 33, "73": 33, "74": 34, "75": 34, "76": 35, "77": 35, "78": 36, "79": 37, "80": 38, "81": 39, "82": 39, "83": 39, "84": 41, "85": 44, "86": 45, "87": 46, "88": 53, "89": 53, "90": 163, "91": 164, "92": 166, "93": 166, "94": 176, "95": 179, "96": 180, "97": 180, "98": 180, "99": 180, "100": 180, "101": 180, "102": 180, "103": 182, "109": 103}, "uri": "hotspots.html", "source_encoding": "ascii"}
 __M_END_METADATA
 """

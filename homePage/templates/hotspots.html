@@ -174,10 +174,10 @@
     </div>
   %endif
 </div>
-<div id = "Assyrian_sign" class = "inline" style = " bottom: 0px; background-color: rgb(238,233,233); position: fixed; width: 100%; z-index: 10000">
+<div id = "Assyrian_sign" class = "inline" style = " bottom: 0px; background-color: black; position: fixed; width: 100%; z-index: 10000">
   <ul class="social-icons list-inline draggable-char col-md-12 col-sm-12 col-xs-12">
-   %for object in sign:
-      <li><img id = "Sign${object.id}" data-id = ${object.id} class = "Individual_signs" src="${object.filepath}"></li>
+   %for object in characters:
+      <li><img id = "Sign${object.Sign.id}" data-id = ${object.Sign.id} class = "Individual_signs" src="${object.Sign}"></li>
     %endfor
   </ul>
 </div>
@@ -185,7 +185,6 @@
 <script src="/static/homePage/js/lib/colorpicker.js"></script>
   <script src="/static/homePage/js/hotspot-map-editor.js"></script>
   <script src="/static/homePage/js/hotspot-map.min.js"></script>
-  <script src="/static/homePage/js/signs.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 </body>
 

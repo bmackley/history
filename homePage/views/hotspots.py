@@ -58,6 +58,9 @@ def process_request(request):
     # newChar.mimeType = "8-01"
     # newChar.save()
     #line = m.Line.objects.get(lineNumber = 1)
+    characters = m.Character.objects.all()[6:20]
+    for i in characters:
+        print(i.Sign)
     sign = m.Sign.objects.all()[:20]
     #only get identified characters if user is logged in
     if request.user.is_authenticated():
@@ -79,6 +82,7 @@ def process_request(request):
         'form' : form,
         'createForm' : createForm,
         'identifiedChars' : identifiedChars,
+        'characters' : characters,
 	}
     return templater.render_to_response(request, 'hotspots.html', tvars)
 
