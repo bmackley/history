@@ -7,71 +7,9 @@ from . import templater
 import glob
 
 def process_request(request):
-  tablet = m.Tablet.objects.get(id = 2)
-  new_line = m.Line()
-  new_line.tablet = tablet
-  new_line.side = "obv"
-  new_line.lineNumber = 1
-  new_line.save()
 
-  tablet = m.Tablet.objects.get(id = 2)
-  new_line = m.Line()
-  new_line.tablet = tablet
-  new_line.side = "obv"
-  new_line.lineNumber = 2
-  new_line.save()
-
-  tablet = m.Tablet.objects.get(id = 2)
-  new_line = m.Line()
-  new_line.tablet = tablet
-  new_line.side = "obv"
-  new_line.lineNumber = 3
-  new_line.save()
-
-  tablet = m.Tablet.objects.get(id = 2)
-  new_line = m.Line()
-  new_line.tablet = tablet
-  new_line.side = "obv"
-  new_line.lineNumber = 4
-  new_line.save()
-
-  tablet = m.Tablet.objects.get(id = 2)
-  new_line = m.Line()
-  new_line.tablet = tablet
-  new_line.side = "obv"
-  new_line.lineNumber = 5
-  new_line.save()
-
-  tablet = m.Tablet.objects.get(id = 2)
-  new_line = m.Line()
-  new_line.tablet = tablet
-  new_line.side = "obv"
-  new_line.lineNumber = 6
-  new_line.save()
-
-  tablet = m.Tablet.objects.get(id = 2)
-  new_line = m.Line()
-  new_line.tablet = tablet
-  new_line.side = "obv"
-  new_line.lineNumber = 7
-  new_line.save()
-
-  tablet = m.Tablet.objects.get(id = 2)
-  new_line = m.Line()
-  new_line.tablet = tablet
-  new_line.side = "obv"
-  new_line.lineNumber = 8
-  new_line.save()
-
-  tablet = m.Tablet.objects.get(id = 2)
-  new_line = m.Line()
-  new_line.tablet = tablet
-  new_line.side = "obv"
-  new_line.lineNumber = 9
-  new_line.save()
-
-  sign = m.Sign.objects.get(id = '589')
-  line = m.Line.objects.get(lineNumber = 1)
+  sign = m.Sign.objects.get(name = '589')
+  line = m.Line.objects.get(id = '237')
   new_char = m.Character()
   new_char.id = 1
   new_char.line = line
@@ -79,8 +17,8 @@ def process_request(request):
   new_char.note = "6a74eaae-3c30-4661-a7fb-2adfc974df0b"
   new_char.save()
 
-  sign = m.Sign.objects.get(id = '78')
-  line = m.Line.objects.get(lineNumber = 1)
+  sign = m.Sign.objects.get(name = '78')
+  line = m.Line.objects.get(id = '237')
   new_char = m.Character()
   new_char.id = 2
   new_char.line = line
@@ -88,8 +26,8 @@ def process_request(request):
   new_char.note = "6fc68815-1ead-420c-8eb9-844a23491b75"
   new_char.save()
 
-  sign = m.Sign.objects.get(id = '579')
-  line = m.Line.objects.get(lineNumber = 1)
+  sign = m.Sign.objects.get(name = '579')
+  line = m.Line.objects.get(id = '237')
   new_char = m.Character()
   new_char.id = 3
   new_char.line = line
@@ -97,8 +35,8 @@ def process_request(request):
   new_char.note = "9f25034b-e28a-4459-ae5d-255372ed3098"
   new_char.save()
 
-  sign = m.Sign.objects.get(id = '170')
-  line = m.Line.objects.get(lineNumber = 1)
+  sign = m.Sign.objects.get(name = '170')
+  line = m.Line.objects.get(id = '237')
   new_char = m.Character()
   new_char.id = 4
   new_char.line = line
@@ -106,8 +44,8 @@ def process_request(request):
   new_char.note = "7fa1866d-993e-45f0-88f8-2aa8559ff7c0"
   new_char.save()
 
-  sign = m.Sign.objects.get(id = '557')
-  line = m.Line.objects.get(lineNumber = 1)
+  sign = m.Sign.objects.get(name = '557')
+  line = m.Line.objects.get(id = '237')
   new_char = m.Character()
   new_char.id = 5
   new_char.line = line
@@ -115,8 +53,8 @@ def process_request(request):
   new_char.note = "3336488b-f628-404c-b742-b6dee11fc348"
   new_char.save()
 
-  sign = m.Sign.objects.get(id = '319')
-  line = m.Line.objects.get(lineNumber = 2)
+  sign = m.Sign.objects.get(name = '319')
+  line = m.Line.objects.get(id = '238')
   new_char = m.Character()
   new_char.id = 6
   new_char.line = line
@@ -124,8 +62,8 @@ def process_request(request):
   new_char.note = "7fa1f185-7831-42ff-9bd0-9faa485626f3"
   new_char.save()
 
-  sign = m.Sign.objects.get(id = '396')
-  line = m.Line.objects.get(lineNumber = 2)
+  sign = m.Sign.objects.get(name = '396a')
+  line = m.Line.objects.get(id = '238')
   new_char = m.Character()
   new_char.id = 7
   new_char.line = line
@@ -133,8 +71,8 @@ def process_request(request):
   new_char.note = "1848f5e6-c0cd-4c6c-a05e-39527afe8a79"
   new_char.save()
 
-  sign = m.Sign.objects.get(id = '335')
-  line = m.Line.objects.get(lineNumber = 2)
+  sign = m.Sign.objects.get(name = '335')
+  line = m.Line.objects.get(id = '238')
   new_char = m.Character()
   new_char.id = 8
   new_char.line = line
@@ -142,8 +80,8 @@ def process_request(request):
   new_char.note = "f3e64cbc-5bdf-4354-bffc-8a979d90aef7"
   new_char.save()
 
-  sign = m.Sign.objects.get(id = '579')
-  line = m.Line.objects.get(lineNumber = 2)
+  sign = m.Sign.objects.get(name = '579')
+  line = m.Line.objects.get(id = '238')
   new_char = m.Character()
   new_char.id = 9
   new_char.line = line
@@ -151,8 +89,8 @@ def process_request(request):
   new_char.note = "d7512498-1f54-451b-86d6-5fa6ef3df3ee"
   new_char.save()
 
-  sign = m.Sign.objects.get(id = '112')
-  line = m.Line.objects.get(lineNumber = 2)
+  sign = m.Sign.objects.get(name = '112')
+  line = m.Line.objects.get(id = '238')
   new_char = m.Character()
   new_char.id = 10
   new_char.line = line
@@ -161,7 +99,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '532')
-  line = m.Line.objects.get(lineNumber = 2)
+  line = m.Line.objects.get(id = '238')
   new_char = m.Character()
   new_char.id = 11
   new_char.line = line
@@ -170,7 +108,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '399')
-  line = m.Line.objects.get(lineNumber = 2)
+  line = m.Line.objects.get(id = '238')
   new_char = m.Character()
   new_char.id = 12
   new_char.line = line
@@ -179,7 +117,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '142')
-  line = m.Line.objects.get(lineNumber = 3)
+  line = m.Line.objects.get(id = '239')
   new_char = m.Character()
   new_char.id = 13
   new_char.line = line
@@ -188,7 +126,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '396a')
-  line = m.Line.objects.get(lineNumber = 3)
+  line = m.Line.objects.get(id = '239')
   new_char = m.Character()
   new_char.id = 14
   new_char.line = line
@@ -197,7 +135,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '148')
-  line = m.Line.objects.get(lineNumber = 3)
+  line = m.Line.objects.get(id = '239')
   new_char = m.Character()
   new_char.id = 15
   new_char.line = line
@@ -206,7 +144,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '342')
-  line = m.Line.objects.get(lineNumber = 3)
+  line = m.Line.objects.get(id = '239')
   new_char = m.Character()
   new_char.id = 16
   new_char.line = line
@@ -215,7 +153,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '579')
-  line = m.Line.objects.get(lineNumber = 4)
+  line = m.Line.objects.get(id = "240")
   new_char = m.Character()
   new_char.id = 17
   new_char.line = line
@@ -224,7 +162,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '70')
-  line = m.Line.objects.get(lineNumber = 4)
+  line = m.Line.objects.get(id = "240")
   new_char = m.Character()
   new_char.id = 18
   new_char.line = line
@@ -233,7 +171,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '598a')
-  line = m.Line.objects.get(lineNumber = 4)
+  line = m.Line.objects.get(id = "240")
   new_char = m.Character()
   new_char.id = 19
   new_char.line = line
@@ -242,7 +180,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '595')
-  line = m.Line.objects.get(lineNumber = 4)
+  line = m.Line.objects.get(id = "240")
   new_char = m.Character()
   new_char.id = 20
   new_char.line = line
@@ -251,7 +189,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '468')
-  line = m.Line.objects.get(lineNumber = 4)
+  line = m.Line.objects.get(id = "240")
   new_char = m.Character()
   new_char.id = 21
   new_char.line = line
@@ -260,7 +198,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '381')
-  line = m.Line.objects.get(lineNumber = 4)
+  line = m.Line.objects.get(id = "240")
   new_char = m.Character()
   new_char.id = 22
   new_char.line = line
@@ -269,7 +207,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '319')
-  line = m.Line.objects.get(lineNumber = 5)
+  line = m.Line.objects.get(id = "241")
   new_char = m.Character()
   new_char.id = 23
   new_char.line = line
@@ -278,7 +216,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '319')
-  line = m.Line.objects.get(lineNumber = 5)
+  line = m.Line.objects.get(id = "241")
   new_char = m.Character()
   new_char.id = 24
   new_char.line = line
@@ -287,7 +225,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '86')
-  line = m.Line.objects.get(lineNumber = 5)
+  line = m.Line.objects.get(id = "241")
   new_char = m.Character()
   new_char.id = 25
   new_char.line = line
@@ -296,7 +234,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '579')
-  line = m.Line.objects.get(lineNumber = 5)
+  line = m.Line.objects.get(id = "241")
   new_char = m.Character()
   new_char.id = 26
   new_char.line = line
@@ -305,7 +243,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '212')
-  line = m.Line.objects.get(lineNumber = 6)
+  line = m.Line.objects.get(id = "242")
   new_char = m.Character()
   new_char.id = 27
   new_char.line = line
@@ -314,7 +252,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '579')
-  line = m.Line.objects.get(lineNumber = 6)
+  line = m.Line.objects.get(id = "242")
   new_char = m.Character()
   new_char.id = 28
   new_char.line = line
@@ -323,7 +261,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '170')
-  line = m.Line.objects.get(lineNumber = 6)
+  line = m.Line.objects.get(id = "242")
   new_char = m.Character()
   new_char.id = 29
   new_char.line = line
@@ -332,7 +270,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '112')
-  line = m.Line.objects.get(lineNumber = 6)
+  line = m.Line.objects.get(id = "242")
   new_char = m.Character()
   new_char.id = 30
   new_char.line = line
@@ -341,7 +279,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '354a')
-  line = m.Line.objects.get(lineNumber = 6)
+  line = m.Line.objects.get(id = "242")
   new_char = m.Character()
   new_char.id = 31
   new_char.line = line
@@ -350,7 +288,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '342')
-  line = m.Line.objects.get(lineNumber = 6)
+  line = m.Line.objects.get(id = "242")
   new_char = m.Character()
   new_char.id = 32
   new_char.line = line
@@ -359,7 +297,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '342')
-  line = m.Line.objects.get(lineNumber = 7)
+  line = m.Line.objects.get(id = "243")
   new_char = m.Character()
   new_char.id = 33
   new_char.line = line
@@ -368,7 +306,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '342')
-  line = m.Line.objects.get(lineNumber = 7)
+  line = m.Line.objects.get(id = "243")
   new_char = m.Character()
   new_char.id = 34
   new_char.line = line
@@ -377,7 +315,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '13')
-  line = m.Line.objects.get(lineNumber = 7)
+  line = m.Line.objects.get(id = "243")
   new_char = m.Character()
   new_char.id = 35
   new_char.line = line
@@ -386,7 +324,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '579')
-  line = m.Line.objects.get(lineNumber = 7)
+  line = m.Line.objects.get(id = "243")
   new_char = m.Character()
   new_char.id = 36
   new_char.line = line
@@ -395,7 +333,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '70')
-  line = m.Line.objects.get(lineNumber = 8)
+  line = m.Line.objects.get(id = "244")
   new_char = m.Character()
   new_char.id = 37
   new_char.line = line
@@ -404,7 +342,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '319')
-  line = m.Line.objects.get(lineNumber = 8)
+  line = m.Line.objects.get(id = "244")
   new_char = m.Character()
   new_char.id = 38
   new_char.line = line
@@ -413,7 +351,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '319')
-  line = m.Line.objects.get(lineNumber = 8)
+  line = m.Line.objects.get(id = "244")
   new_char = m.Character()
   new_char.id = 39
   new_char.line = line
@@ -422,7 +360,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '86')
-  line = m.Line.objects.get(lineNumber = 8)
+  line = m.Line.objects.get(id = "244")
   new_char = m.Character()
   new_char.id = 40
   new_char.line = line
@@ -431,7 +369,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '579')
-  line = m.Line.objects.get(lineNumber = 9)
+  line = m.Line.objects.get(id = "245")
   new_char = m.Character()
   new_char.id = 41
   new_char.line = line
@@ -440,7 +378,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '142')
-  line = m.Line.objects.get(lineNumber = 9)
+  line = m.Line.objects.get(id = "245")
   new_char = m.Character()
   new_char.id = 42
   new_char.line = line
@@ -449,7 +387,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '206')
-  line = m.Line.objects.get(lineNumber = 9)
+  line = m.Line.objects.get(id = "245")
   new_char = m.Character()
   new_char.id = 43
   new_char.line = line
@@ -458,7 +396,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '383')
-  line = m.Line.objects.get(lineNumber = 9)
+  line = m.Line.objects.get(id = "245")
   new_char = m.Character()
   new_char.id = 44
   new_char.line = line
@@ -467,7 +405,7 @@ def process_request(request):
   new_char.save()
 
   sign = m.Sign.objects.get(name = '451')
-  line = m.Line.objects.get(lineNumber = 9)
+  line = m.Line.objects.get(id = "245")
   new_char = m.Character()
   new_char.id = 45
   new_char.line = line
@@ -477,4 +415,4 @@ def process_request(request):
 
   tvars = {
   }
-  return templater.render_to_response(request, 'index.html', tvars)
+  return templater.render_to_response(request, 'login.html', tvars)
