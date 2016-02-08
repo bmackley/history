@@ -70,14 +70,14 @@ def process_request(request):
   new_line.lineNumber = 9
   new_line.save()
 
-  sign = m.Sign.objects.get(name = '589')
-  line = m.Line.objects.get(lineNumber = 1)
-  new_char = m.Character()
-  new_char.id = 1
-  new_char.line = line
-  new_char.Sign = sign
-  new_char.note = "6a74eaae-3c30-4661-a7fb-2adfc974df0b"
-  new_char.save()
+  # sign = m.Sign.objects.get(name = '589')
+  # line = m.Line.objects.get(lineNumber = 1)
+  # new_char = m.Character()
+  # new_char.id = 1
+  # new_char.line = line
+  # new_char.Sign = sign
+  # new_char.note = "6a74eaae-3c30-4661-a7fb-2adfc974df0b"
+  # new_char.save()
 
   sign = m.Sign.objects.get(name = '78')
   line = m.Line.objects.get(lineNumber = 1)
