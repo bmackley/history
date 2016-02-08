@@ -58,7 +58,7 @@ def process_request(request):
     # newChar.mimeType = "8-01"
     # newChar.save()
     #line = m.Line.objects.get(lineNumber = 1)
-    characters = m.Character.objects.all()[6:20]
+    characters = m.Character.objects.all()[6:15]
     for i in characters:
         print(i.Sign)
     sign = m.Sign.objects.all()[:20]
