@@ -7,6 +7,68 @@ from . import templater
 import glob
 
 def process_request(request):
+  tablet = m.Tablet.objects.get(id = 2)
+  new_line = m.Line()
+  new_line.tablet = tablet
+  new_line.side = "obv"
+  new_line.lineNumber = 1
+  new_line.save()
+
+  tablet = m.Tablet.objects.get(id = 2)
+  new_line = m.Line()
+  new_line.tablet = tablet
+  new_line.side = "obv"
+  new_line.lineNumber = 2
+  new_line.save()
+
+  tablet = m.Tablet.objects.get(id = 2)
+  new_line = m.Line()
+  new_line.tablet = tablet
+  new_line.side = "obv"
+  new_line.lineNumber = 3
+  new_line.save()
+
+  tablet = m.Tablet.objects.get(id = 2)
+  new_line = m.Line()
+  new_line.tablet = tablet
+  new_line.side = "obv"
+  new_line.lineNumber = 4
+  new_line.save()
+
+  tablet = m.Tablet.objects.get(id = 2)
+  new_line = m.Line()
+  new_line.tablet = tablet
+  new_line.side = "obv"
+  new_line.lineNumber = 5
+  new_line.save()
+
+  tablet = m.Tablet.objects.get(id = 2)
+  new_line = m.Line()
+  new_line.tablet = tablet
+  new_line.side = "obv"
+  new_line.lineNumber = 6
+  new_line.save()
+
+  tablet = m.Tablet.objects.get(id = 2)
+  new_line = m.Line()
+  new_line.tablet = tablet
+  new_line.side = "obv"
+  new_line.lineNumber = 7
+  new_line.save()
+
+  tablet = m.Tablet.objects.get(id = 2)
+  new_line = m.Line()
+  new_line.tablet = tablet
+  new_line.side = "obv"
+  new_line.lineNumber = 8
+  new_line.save()
+
+  tablet = m.Tablet.objects.get(id = 2)
+  new_line = m.Line()
+  new_line.tablet = tablet
+  new_line.side = "obv"
+  new_line.lineNumber = 9
+  new_line.save()
 
   sign = m.Sign.objects.get(id = '589')
   line = m.Line.objects.get(lineNumber = 1)
@@ -415,4 +477,4 @@ def process_request(request):
 
   tvars = {
   }
-  return templater.render_to_response(request, 'login.html', tvars)
+  return templater.render_to_response(request, 'index.html', tvars)

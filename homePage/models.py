@@ -31,7 +31,7 @@ class Line(models.Model):
         ('FR', 'FRONT'), #add the other sides
     )
     tablet = models.ForeignKey(Tablet, related_name = "TabletNum")
-    side = models.TextField()
+    side = models.TextField(blank= True, null=True)
     lineNumber = models.PositiveSmallIntegerField(blank= True, null=True)
     def __str__(self):
         return self.lineNumber
@@ -58,7 +58,7 @@ class IdentifiedCharacter(models.Model): #change this to placement
     hotspot_width = models.PositiveSmallIntegerField(blank=True, null=True)
     hotspot_height = models.PositiveSmallIntegerField(blank=True, null=True)
     def __str__(self):
-        return self.link
+        return self.date_recorded
 '''
 Stored Procedures:
 -	After a certain amount of user inputs, the database calculates the hotspots and sends the report to us.  
