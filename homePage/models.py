@@ -34,7 +34,7 @@ class Line(models.Model):
     side = models.TextField(blank= True, null=True)
     lineNumber = models.PositiveSmallIntegerField(blank= True, null=True)
     def __str__(self):
-        return self.lineNumber
+        return str(self.lineNumber)
 class Sign(models.Model):
     filepath = models.TextField(blank=True, null=True)
     name = models.TextField(blank= True, null=True)
