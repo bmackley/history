@@ -8,12 +8,12 @@ import glob
 
 def process_request(request):
   from django import forms
-from django.conf import settings
-from django.http import HttpResponse, HttpResponseRedirect, Http404
-from django.contrib.auth import authenticate, login
-from homePage import models as m
-from . import templater
-import glob
+  from django.conf import settings
+  from django.http import HttpResponse, HttpResponseRedirect, Http404
+  from django.contrib.auth import authenticate, login
+  from homePage import models as m
+  from . import templater
+  import glob
 
 def process_request(request):
   tablet = m.Tablet.objects.get(id = 2)
@@ -81,6 +81,7 @@ def process_request(request):
 
   sign = m.Sign.objects.get(name = '589')
   line = m.Line.objects.get(lineNumber = 1)
+  print(line.id)
   new_char = m.Character()
   new_char.line = line
   new_char.Sign = sign
@@ -202,7 +203,7 @@ def process_request(request):
   sign = m.Sign.objects.get(name = '342')
   line = m.Line.objects.get(lineNumber = 3)
   new_char = m.Character()
-   new_char.line = line
+  new_char.line = line
   new_char.Sign = sign
   new_char.note = "658700b4-1170-437b-b035-599121ff4764"
   new_char.save()

@@ -58,12 +58,7 @@ def process_request(request):
     # newChar.mimeType = "8-01"
     # newChar.save()
     #line = m.Line.objects.get(lineNumber = 1)
-    try:
-        characters = m.Character.objects.all()[6:15]
-    except:
-        characters = "no characters"
-    for i in characters:
-        print(i.Sign)
+    characters = m.Character.objects.filter(line__lineNumber = 2)
     sign = m.Sign.objects.all()[:20]
     #only get identified characters if user is logged in
     if request.user.is_authenticated():

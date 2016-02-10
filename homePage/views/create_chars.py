@@ -4,7 +4,6 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.contrib.auth import authenticate, login
 from homePage import models as m
 from . import templater
-import glob
 
 def process_request(request):
   charForm = CreateCharForm()

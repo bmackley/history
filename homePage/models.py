@@ -47,7 +47,7 @@ class Character(models.Model):
     Sign = models.ForeignKey(Sign, related_name = "char_sign")
     note = models.TextField(blank= True, null=True)
     def __str__(self):
-        return self.positionNO
+        return self.note
 class IdentifiedCharacter(models.Model): #change this to placement
     user = models.ForeignKey(User)
     sign = models.ForeignKey(Sign, related_name = "Sign", blank=True, null=True)
