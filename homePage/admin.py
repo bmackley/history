@@ -6,6 +6,6 @@ from .models import *
 admin.site.register(User)
 admin.site.register(Tablet)
 admin.site.register(Line)
-admin.site.register(Character)
+admin.site.register(AssyrianChar)
 admin.site.register(Sign)
 admin.site.register(IdentifiedCharacter)

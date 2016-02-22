@@ -41,7 +41,7 @@ class Sign(models.Model):
     mimeType = models.TextField()
     def __str__(self):
         return self.filepath
-class Character(models.Model):
+class AssyrianChar(models.Model):
     line = models.PositiveSmallIntegerField(blank=True, null=True)
     positionNO = models.PositiveSmallIntegerField(blank= True, null=True)
     Sign = models.ForeignKey(Sign, related_name = "char_sign")
