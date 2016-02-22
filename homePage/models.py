@@ -42,7 +42,7 @@ class Sign(models.Model):
     def __str__(self):
         return self.filepath
 class Character(models.Model):
-    line = models.ForeignKey(Line, related_name = "TabletLine")
+    line = models.PositiveSmallIntegerField(blank=True, null=True)
     positionNO = models.PositiveSmallIntegerField(blank= True, null=True)
     Sign = models.ForeignKey(Sign, related_name = "char_sign")
     note = models.TextField(blank= True, null=True)
