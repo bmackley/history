@@ -58,7 +58,7 @@ def process_request(request):
     # newChar.mimeType = "8-01"
     # newChar.save()
     #line = m.Line.objects.get(lineNumber = 1)
-    characters = m.Character.objects.filter(line__lineNumber = 2)
+    characters = m.AssyrianChar.objects.filter(line = 2)
     sign = m.Sign.objects.all()[:20]
     #only get identified characters if user is logged in
     if request.user.is_authenticated():
